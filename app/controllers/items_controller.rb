@@ -17,6 +17,8 @@ class ItemsController < ApplicationController
     )
 
     Itemorder.create(item_id: params[:id])
+
+    redirect_to root_path
   end
 
   private
