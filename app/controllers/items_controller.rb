@@ -15,6 +15,8 @@ class ItemsController < ApplicationController
       customer: customer_token, # 顧客のトークン
       currency: 'jpy' # 通貨の種類（日本円）
     )
+
+    Itemorder.create(item_id: params[:id])
   end
 
   private
