@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
   end
 
   def order
+    redirect_to new_card_path and return unless current_user.card.present?
   end
 
   private
@@ -13,5 +14,5 @@ class ItemsController < ApplicationController
   def find_item
     @item = Item.find(params[:id])
   end
-  
+
 end
