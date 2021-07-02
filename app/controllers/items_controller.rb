@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
       currency: 'jpy' # 通貨の種類（日本円）
     )
 
-    Itemorder.create(item_id: params[:id])
+    ItemOrder.create(item_id: params[:id])
 
     redirect_to root_path
   end
